@@ -29,6 +29,9 @@
             <li class="nav-item">
               <a class="m-1 nav-link" href="#forma">Form</a>
             </li>
+            <li class="nav-item">
+                <a class="m-1 nav-link" href="#calk">Calculator</a>
+              </li>
           </ul>
         </div>
       </nav>
@@ -189,45 +192,48 @@
                 <input id="down" type="submit" value="Сохранить">
             </form>
             </div>
+
             <div class="order-3 m-3 justify-content-center" id="elem-border">
-                <h2 class="calculator" id="calculator">Составьте свой заказ</h2>
-                <form>
+                <h2 class="calculator" id="calculator">Калькулятор стоимости товаров</h2>
+                <form id="calk">
                     <p>Выберите товар:
                         <select name="myselect" required>
                             <option value="1">Шаурма 200 руб.</option>
-                            <option value="2">Добрый Кола 80 руб.</option>
+                            <option value="2">Кола 80 руб.</option>
                             <option value="3">Чизкейк 180 руб.</option>
                         </select>
                     </p>
-            
+        
                     <p>Введите количество: <input id="quantity" class="quantity"></p>
-            
+        
                     <div class="myradios" id="myradios">
-                        <label><input type="radio" name="myradio" value="30">Халапеньо</label>
-                        <label><input type="radio" name="myradio" value="30">Сыр</label>
-                        <label><input type="radio" name="myradio" value="30">Бекон</label>
+                        <label><input type="radio" name="myradio" value="40">Халапеньо</label>
+                        <label><input type="radio" name="myradio" value="40">Сыр</label>
+                        <label><input type="radio" name="myradio" value="40">Бекон</label>
                     </div>
-            
+        
                     <p class="mycheckbox" id="mycheckbox">
                         <label>
-                            Нужен пакет? <input value="10" type="checkbox">
+                            Пакет нужен? <input value="10" type="checkbox">
                         </label>
                     </p>
-            
+        
                 </form>
-            
+        
                 <button id="button">Calculate</button>
                 <p id="finalPrice"></p>
                 <script src="calculate.js"></script>
+                
             </div>
-            </div>
-        
+        </div>
+    
     
 
     <footer class="row p-4" > 
     
         <div class="">&copy; Филипенко Никита</div>
     </footer>
+    <script src="calculate.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
 </body>
