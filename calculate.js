@@ -7,10 +7,10 @@ class Product {
         this.bag = bag;
 
         if (this.quantity < 1) {
-            throw new Error('Quantity cannot be less than 1');
+            throw new Error('Количество - это целое положительное число');
         }
         if(Number.isInteger(this.quantity) === false) {
-            throw new Error('Quantity should be a positive number');
+            throw new Error('Количество - это целое положительное число');
         }
 
         let i=0;
@@ -25,9 +25,9 @@ class Product {
     }
 
     getFinalPrice() {
-        if(this.name==="Наполеон")
+        if(this.name==="Чизкейк")
             return this.pricePerOne * this.quantity
-        if(this.name==="Американо")
+        if(this.name==="Кола")
             return this.pricePerOne * this.quantity + this.bag;
         return this.pricePerOne * this.quantity + this.bag + this.souce;
     }
@@ -44,7 +44,7 @@ function onClick(event) {
 
     try {
         let product = new Product(productOption, quantity, Number(souce), Number(bag));
-        document.getElementById('finalPrice').textContent = 'Final price: ' + product.getFinalPrice();
+        document.getElementById('finalPrice').textContent = 'Итого: ' + product.getFinalPrice()+' руб.';
     } catch (error) {
         console.error(error.message);
         alert(error.message);
@@ -63,10 +63,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
         if (select.value === "3") {
             radios.style.display = "none";
-            c.parentNode.style.display = "none";
+            c.parentNode.style.display = "block";
         } else if(select.value === "2") {
             radios.style.display = "none";
-            c.parentNode.style.display = "block";
+            c.parentNode.style.display = "none";
         }
         else {
             radios.style.display = "block";
